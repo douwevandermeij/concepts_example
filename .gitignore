@@ -1,0 +1,7 @@
+*.pyc
+*.sqlite3
+*.idea
+bin
+lib
+include
+share
