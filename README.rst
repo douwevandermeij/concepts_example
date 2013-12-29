@@ -19,3 +19,15 @@ Consumers
 ---------------------------------------------------
 Consumers use the concept and treat them as regular models. The fact that producing models can contain more fields are
 - and should be - ignored by consumers.
+
+License
+===================================================
+GPL 2.0/LGPL 2.1
+
+Support
+===================================================
+For any issues contact me at the e-mail given in the `Author` section.
+
+Author
+===================================================
+Douwe van der Meij <douwevandermeij@gmail.com>
