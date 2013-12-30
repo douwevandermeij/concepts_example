@@ -1,5 +1,5 @@
 from django.contrib import admin
-from concepts.models import ProfileConcept
+from concepts.profile import ProfileConcept
 
 
 class ProfileConceptAdmin(admin.ModelAdmin):

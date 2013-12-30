@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from concepts.models import ProfileConcept
+from concepts.profile import ProfileConcept
 
 
 class ProfileInfo(models.Model):
