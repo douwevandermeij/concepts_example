@@ -37,9 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'crm',
+    'webshop',
     'concepts',
-    'backend',
-    'frontend',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -86,5 +86,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CONCEPTS = {
-    'ProfileConcept': ('backend.models.UserExtension', {'nickname': 'name'},),
+    'CustomerConcept': {
+        'crm.models.Customer': {
+            'number': 'account_nr',
+        },
+    },
 }
