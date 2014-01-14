@@ -1,8 +1,18 @@
+import sys
 from django.conf import settings
 from concepts.util import load_class
-import concepts
+
+thismodule = sys.modules[__name__]
 
 
+# Concepts (will be replaced dynamically)
+class CustomerConcept(object):
+    @property
+    def number(self):
+        raise NotImplementedError
+
+
+# Dynamically create concepts
 for concept_name, mapping in settings.CONCEPTS.items():
     for klass, fields in mapping.items():
         concept = type(
@@ -23,4 +33,4 @@ for concept_name, mapping in settings.CONCEPTS.items():
                         lambda self, value: setattr(self, _field, value),
                     ),
                 )
-        setattr(concepts, concept_name, concept)
+        setattr(thismodule, concept_name, concept)
